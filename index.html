@@ -1,0 +1,707 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		html{
+			font-size:62.5px;
+			}
+	.nav{
+		display:flex;
+		justify-content:end;
+		gap:20px;
+		font-size:0.4rem;
+	
+		}
+	.main{
+			display:flex;
+			justify-content:space-between;
+			position:relative;
+			gap:20px;
+			}
+	#img1{
+			height:100px;
+			width:150px;
+			}
+	#img2{
+			height:200px;
+			width:160px;
+			transform:translate(30px,-300px);
+
+			}
+	.circle{
+		height:270px;
+		width:270px;
+		border-radius:50%;
+		background:orange;	
+		position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		transform:translate(-40px,0);
+		z-index:1;
+		}
+	.inner{
+		height:125px;
+		width:125px;
+		border-radius:50%;
+		position:absolute;
+		background:white;
+		z-index:2;
+		}
+	#model{
+			z-index:3;
+			}
+	.slo{
+		font-family:comic sans ms;
+		color:blue;
+		font-size:1rem;
+		top:30px;
+		transform:rotateZ(-8deg) translateY(40px);
+	
+		}
+	.slo1{
+		color:orange;
+		font-size:0.3rem;
+		transform:translateY(-10px);
+
+		}	
+	.cont{
+		height:370px;
+		background:blue;
+		position:relative;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+		}
+	.box{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+		}
+	#box1{
+		height:250px;
+		width:40%;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;
+		
+		}
+	#box2{
+		height:250px;
+		width:40%;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;
+		}
+	#dimg3{
+			height:105px;
+			width:105px;
+			border-radius:50%;
+			background:orange;
+			display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+			}
+	#img3{
+			height:100px;
+			width:100px;
+			border-radius:50%;
+		}
+	#sym{
+		color:blue;
+		line-height:40px;
+			}
+	/*.btn{
+		height:30px;
+		width:200px;
+		border-radius:30px;
+		display:flex;
+		background:;
+		justify-content:center;
+		align-items:center;
+		line-height:40px;
+		margin-right:150px;
+		position:relative;
+		}*/
+		#btn2{
+			height:30px;
+			width:200px;
+			border-radius:30px;
+			background:transparent;
+			color:black;
+			border:2px solid orange;
+			/*display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:center;*/
+			
+			position:relative;
+			z-index:99;
+			}
+		#btn1{
+			height:30px;
+			width:0%;
+			border-radius:30px;
+			left:0px;
+			top:0;
+			position:absolute;
+			z-index:-1;
+			}
+		#btn2:hover #btn1{
+						background:orange;
+						width:100%;
+						transition:3s;
+					}
+	#ed{
+		height:40px;
+		width:250px;
+		border-radius:10px;
+		background:orange;
+		color:white;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		font-size:0.4rem;
+		}
+	#sec2{
+		background:blue;
+		}
+
+	.contt{
+		height:100vh;
+		width:100%;
+		background:blue;
+		position:relative;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+		}
+	.boxx{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+		positon:absolute;
+		}
+	#boxx1{
+		height:300px;
+		width:80%;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;positon:absolute;
+			line-height:23px;
+				}
+	#boxx2{
+		height:330px;
+		width:80%;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;
+		positon:absolute;
+		}
+	.conttt{
+		height:100vh;
+		width:100%;
+		background:blue;
+		position:relative;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+		}
+	.boxxx{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+		positon:absolute;
+		}
+	#boxxx1{
+		height:550px;
+		width:100vw;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;positon:absolute;
+				}
+		.dimg{
+			display:flex;
+			}
+
+		.outb{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		font-size:0.3rem;positon:absolute;
+				}	
+		.btnn{
+			background:white;
+			color:blue;
+			border-radius:20px;
+			width:100px;
+			display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+			}
+
+		.contttt{
+		height:100vh;
+		width:1503px;
+		background:blue;
+		position:relative;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+		}
+	.boxxxx{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		
+		positon:absolute;
+		}
+	#boxxxx1{
+		height:50%;
+		width:1463px;
+		background:orange;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;
+		positon:absolute;
+		
+				}
+	#boxxxx2{
+		height:50%;
+		width:1463px;
+
+		background:blue;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;
+		positon:absolute;
+		}
+	.ser{
+		background:white;
+		 height:100px ;
+		width:100px;
+		 border-radius:50%;
+		 border:3px solid blue; 
+		color:blue;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		font-size:0.4rem;
+		}
+	#best{
+			font-size:0.4rem;
+			}
+	#dis{
+	
+		}
+	#img9{
+		height:50px;
+		width:50px;
+		margin-left:-70px;
+		}
+	a{
+		text-decoration:none;
+		color:black;
+		border-bottom:3px solid white;
+		width:0%;
+		}
+	
+	
+	a:hover{
+			border-bottom:3px solid orange;
+			width:100%;
+			transition:3s;
+			}
+
+		
+	.container{
+			height:100vh;
+			width:100vw;
+			padding:20px;
+			margin:20px;
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+			font-size:0.4rem;
+			}
+		.btns div{
+			width:300px;
+			height:30px;
+			background:black;
+			border-radius:10px solid black;
+			gap:20px;
+			color:white;
+			}
+		@media (max-width:650px){
+								#box1{
+		height:250px;
+		width:35%;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.2rem;
+		
+		}
+				
+					
+							#box2{
+		height:250px;
+		width:40%;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.2rem;
+		}
+			
+					
+				#boxx1{
+		height:300px;
+		width:80%;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.2rem;
+				}
+
+						#boxx2{
+		height:330px;
+		width:80%;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.2rem;
+		}
+						#boxxx1{
+		height:550px;
+		width:100vw;
+		background:white;
+		border-radius:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.2rem;
+				}
+		
+						.nav{
+		display:flex;
+		justify-content:end;
+		gap:20px;
+		font-size:0.3rem;
+	
+		}
+								
+				.slo{
+		font-family:comic sans ms;
+		color:blue;
+		font-size:0.3rem;
+		top:30px;
+		transform:rotateZ(-8deg) translateY(40px);
+	}
+		#boxxxx1{
+		height:50%;
+		width:1463px;
+		background:orange;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;
+
+		
+				}
+	#boxxxx2{
+		height:50%;
+		width:1463px;
+
+		background:blue;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		padding:20px;
+		font-size:0.3rem;
+		positon:absolute;
+		}
+
+	}
+		@media (max-width:650px){
+					#sec1,#sec2,#sec3,#sec4{
+								height:auto;
+								width:140%;
+								}
+							
+								}
+	</style>
+</head>
+<body>
+	<div class="nav">
+	<div class="sec1"><a href="#sec1">HOME</a></div>
+	<div class="sec2"><a href="#sec2">SUGGESTION</a></div>
+	<div class="sec3"><a href="#sec3">CLIENT</a></div>
+	<div class="sec4"><a href="#sec4">SERVICE</a></div>
+	</div>
+	
+	<section id="sec1">
+	<div>
+	<div class="main">
+	<div class="circle"><img src="premium1.png" id="model">
+	<div class="inner"></div>
+	</div>
+	
+	<div class="">
+	<div class="slo"><b>Zindagi ko <br>&nbsp&nbsp&nbsp&nbsp&nbspclaim kar le</b></div><br>
+	<div class="slo1"><b>even with<h1 style="transform:translate(85px,-57px);"> Diabetes!</h1></b></div>
+	</div>
+	
+	<div><img src="niva.avif" id="img1"></div>
+	</div>
+	<div class="cont">
+	<div id="ed"><b>EDITOR'S NOTE</b></div>
+	<div class="box">
+	
+	<div id="box1">Dear Policyholder,<br><p>Welcome to the latest edition of our 'Zindagi Ko Claim Kar Le' Newsletter- your ultimate guide to better health and enghanced insurance coverage. In this issue, we focus on empowering you with valueable insights to effectively manage diabetes.<br><br>Additionally, we're excited to introdue our newly launced cashless Everywhere facility, offering you seamless access to cashless hospitalisation across india. Stay tuned as we walk you through how to make the most of this convenient service.</div>
+	
+	<div id="box2">
+	<div id="dimg3">
+	<div style="background:white ; height:100px ;width:100px; border-radius:50%;"><img src="img3.png" id="img3"></div>
+	</div>
+	<div id="sym"><b>SYMTHOMS & DIAGNOSIS OF DIABETES</b></div>
+	<div>Type 2 diabetes often goes undiagnosed for up to two year. Learn about the<b> early warning signs, causes, and diagonsis </b>of this condition to take proactive steps towards better heath.</div>
+	<center><div id="btn2">Read the Blog
+	<div id="btn1"></div>
+	</div>
+	</div>
+	</div>
+	
+	</div>
+	</div>
+	</section>
+
+
+	<section id="sec2">
+	<div class="contt">
+	<div class="boxx">
+	
+	<div id="boxx1">
+	<div id="dimg3">
+	<div style="background:white ; height:100px ;width:100px; border-radius:50%;"><img src="dr.png" id="img3"></div>
+	</div>
+	<div id="sym"><b>PREVENT & MANAGE DIABETES</b></div><br>
+	<div><i>Did yupu know that over 60% of individuals with prediabates progress to diabetes within five years?</i>.<br>Discover expert tips on preventing pre-diabetes, understanding the role of family history, and exploring ways for type 2 diabates reversal. Join<b> DR.sunil kumar Mishra, Senior Endocrinologist at medanta-</b> The Medicity, Gurugram, as he shares his insights.</div>
+	<div class="btn">
+	<center><div id="btn2">Watch the webinar
+	<div id="btn1"></div>
+	</div>
+	</div>
+	</div>
+	
+	<div id="boxx2">
+	<div id="dimg3">
+	<div style="background:white ; height:100px ;width:100px; border-radius:50%;"><img src="img4.jpeg" id="img3"></div>
+	</div>
+	<div id="sym"><b>WHAT TO DO IN CASE OF COMPLICATIONS?</b></div>
+	<center><div>Experience peace of mind knowing that you can now<b> avail cashless medical treatment at any hospital, even outside our network,</b> with our newly introduced Cashless Everywhere facility. Wheather it's diabetes-related complications or any other medical issue, we're got you covered
+	<p><ion-icon name="business-outline"  style="color:blue;"></ion-icon><b>For planned hospitalisation,</b>Intimate 48 hours in advance for cashless authorisation.</p>
+	
+	<p><ion-icon name="add-circle"  style="color:blue;"></ion-icon><b>For emergency hospitalisation,</b>Intimate 24 hours of addmission.</p>
+	<p><ion-icon name="newspaper"  style="color:blue;"></ion-icon><b>The claim should be admissible </b>as per the terms of your Health Insurance Policy and operating guidelines.</p>
+	</div>
+	<div class="btn">
+	<center><div id="btn2">Intimate Cashless Claim
+	<div id="btn1"></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</section>
+
+	<section id="sec3">
+	
+	<div class="conttt">
+	<div class="boxxx">
+	
+	<div id="boxxx1">
+	<center>
+	<div id="sym"><b>IS NIVA BUPA RELIABLE DURING MEDICAL TREATMENT?</b></div><br>
+	<div>With over <b>15 Lakh claims processed^,</b> we remain committed during challenging times.</div>
+	<div style="color:blue;">-------------------------------------</div>
+	<div style="color:orange;"><b>Watch the first-hand claim experience of follow customers by clicking on the youtube icon.</b></div>
+	<div style="color:blue;">-------------------------------------</div>
+	
+	
+	<div class="dimg">
+	<div id="dimg3" >
+	<div style="background:white ; height:90px ;width:90px; border-radius:50%;"><img src="img5.webp" id="img3"></div>
+	
+	</div>
+	<div  style="top:240px; left:550px;  font-size:"><b><span style="color:blue; font-size:0.6rem; font-family:franklin gothic;">"</span>Niva Bupa provided the right kind of support at the right time during medical emergencies.<span style="color:blue; font-size:0.6rem; font-family:franklin gothic;">"</span></b></div>
+	<div  style="margin-top:60px; margin-left:-500px; color:blue; font-size:0.2rem;">SYSCILA SAMPATH<BR>Bengaluru, Karnataka</div>
+	</div>
+	<div style="color:blue;">--------------------------------------------------------------------------------------------------------------------</div>
+
+	<div class="dimg">
+	<div id="dimg3" >
+	<div style="background:white ; height:90px ;width:90px; border-radius:50%;"><img src="img7.jpg" id="img3"></div>
+	
+	</div>
+	<div  style="top:360px; left:550px; font-size:"><b><span style="color:blue; font-size:0.6rem; font-family:franklin gothic;">"</span>Niva Bupa went above and beyond to extend their support with my claim process.<span style="color:blue; font-size:0.6rem; font-family:franklin gothic;">"</span></b></div>
+	<div  style="margin-top:60px; margin-left:-420px; color:blue; font-size:0.2rem;">AYAPILLA SRIDHAR<BR>Hyderabad, telangana</div>
+	</div>
+	<div style="color:blue;">--------------------------------------------------------------------------------------------------------------------</div>
+
+	<div class="dimg">
+	<div id="dimg3" >
+	<div style="background:white ; height:90px ;width:90px; border-radius:50%;"><img src="img8.webp" id="img3"></div>
+	
+	</div>
+	<div  style="top:490px; left:550px; font-size:"><b><span style="color:blue; font-size:0.6rem; font-family:franklin gothic;">"</span>Niva Bupa provided the right kind of support at the right time during medical emergencies.<span style="color:blue; font-size:0.6rem; font-family:franklin gothic;">"</span></b></div>
+	<div  style="margin-top:60px; margin-left:-500px; color:blue; font-size:0.2rem;">DEVISH MAHESHWARI<BR>Jabalpur, Madhya Pradesh</div>
+	</div>
+	<div style="color:blue;">--------------------------------------------------------------------------------------------------------------------</div>
+	
+	</div>
+	<div class="outb">
+	<div style="color:white; font-size:0.4rem;"><b>Want to know more about our claim process?</b></div>
+	<div class="btnn">Click Here</div>
+	</div>
+	</section>
+
+
+	<section id="sec4">
+
+	<div class="contttt">
+	<div class="boxxxx">
+	
+	<div id="boxxxx1">
+	<center>	<div style="height:290px; width:680px; background:white; border-radius:30px; padding:10px;">
+	<div style="display:flex; justify-content:center;">
+	<div class="ser"><b>24/7 service</b></div>
+	<div style="color:blue;font-size:0.5rem;margin-top:40px;">&nbsp&nbsp&nbsp24x7 Insta assist</div>
+	
+	</div>
+	<div style="font-size:0.5rem;">Assist for all your queries Resolving 2.4 lakh+ queries monthly</div><br><br>
+	<div  style="background:blue; width:220px; height:30px; border-radius:30px;color:white;">Click for instant servicing</div>
+	<div style="color:blue;">-------------------------------------</div>
+	</div>
+	</div>
+	
+	<div id="boxxxx2">
+	<center><div style="height:365px; width:780px; background:white; border-radius:30px;">
+	<div id="sym"><b>INDUSTRY RECOGNISES OUR EFFORTS</b></div>
+	<div style="display:flex; justify-content:center; align-items:center;">
+	<div><img src="img9.jpg" id="img9"></div><div id="best"><b>Best Health Insurer 2023</b></div>
+	</div>
+	<div id="dis">Crowned as the standalone Best Health Insurer at <br>Mint BFSI awards 2023.</div>
+	
+	<div style="color:blue;">-------------------------------------------------------</div>
+	<div style="display:flex; justify-content:center; align-items:center;">
+	<div><img src="img10.jpg" id="img9"></div><div id="best"><b>Swift & prompt Insurance 2023</b></div>
+	</div>
+	<div id="dis">Recognised at ET Now Insurance Summit & <br>awards 2023 for ensuring excellence in all endeavours.</div>
+	<div style="color:blue;">-------------------------------------------------------</div>
+	<div style="display:flex; justify-content:center; align-items:center;">
+	<div><img src="img11.png" id="img9"></div><div id="best"><b>Golden Peacock Award 2023</b></div>
+	</div>
+	<div id="dis">Honored by the institute od Directors for ESG<br> Excellence for our concrete steps towards sustainabilty.</div>
+	<div style="color:blue;">-------------------------------------------------------</div>
+	</div>
+	</div>
+	</div>
+	</section>
+
+
+	<section id="sec5">
+	<div class="container">
+	<div style="display:flex; justify-content:center; align-items:center;font-size:0.3rem; font-family:comic sans ms;">
+	<div style="color:blue;">-------------------------------------------------------&nbsp&nbsp</div>
+	<div style="color:orange;"><b>O</b>&nbsp&nbsp</div>
+	<div style="color:blue;" ><b>Zindadgi ko claim kar le</b>&nbsp&nbsp</div>
+	<div style="color:orange;">O&nbsp&nbsp</div>
+	<div style="color:blue;">-------------------------------------------------------</div>
+	</div>
+	<div style="line-height:90px;"><b>Follow us on</b></div><br>
+	<div><ion-icon name="logo-instagram"></ion-icon>&nbsp&nbsp
+	<ion-icon name="logo-facebook"></ion-icon>&nbsp&nbsp
+	<ion-icon name="logo-linkedin"></ion-icon>&nbsp&nbsp
+	<ion-icon name="logo-youtube"></ion-icon>&nbsp&nbsp
+	<ion-icon name="logo-twitter"></ion-icon></div>
+	<div style="line-height:90px;"><b>Download the Niva Bupa Health app now</b></div>
+	<div>
+	<div><img src="img12.webp" style="height:150px; width:300px;" ></div>
+
+	</div>
+	</section>
+
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	
+</body>
+</html>
